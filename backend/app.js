@@ -24,6 +24,8 @@ mongoose
   })
   .then(() => {
     console.log("DB CONNECTED");
+  }).catch(err=>{
+    console.log(err)
   });
 
 //Middlewares
@@ -41,6 +43,7 @@ app.use("/api", paymentBRoutes);
 
 //PORT
 const port = process.env.PORT || 8000;
+
 
 //Starting a server
 app.listen(port, () => {
